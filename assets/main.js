@@ -408,7 +408,7 @@
 	
 				setTimeout(function() {
 					$body.className = $body.className.replace(/\bis-playing\b/, 'is-ready');
-				}, 8750);
+				}, 21875);
 			}, 100);
 		});
 	
@@ -467,7 +467,73 @@
 					location.href = '#' + section.id.replace(/-section$/, '');
 	
 				},
-				sections = {};
+				doEvent = function(id, type) {
+	
+					var name = id.split(/-[a-z]+$/)[0], i;
+	
+					if (name in sections
+					&&	'events' in sections[name]
+					&&	type in sections[name].events)
+						for (i in sections[name].events[type])
+							(sections[name].events[type][i])();
+	
+				},
+				sections = {
+					'about': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/#about' });
+								},
+							],
+						},
+					},
+					'projects': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/#projects' });
+								},
+							],
+						},
+					},
+					'resume': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/#resume' });
+								},
+							],
+						},
+					},
+					'contact': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/#contact' });
+								},
+							],
+						},
+					},
+					'contact-done': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/#contact-done' });
+								},
+							],
+						},
+					},
+					'home': {
+						events: {
+							onopen: [
+								function() { 
+									gtag('config', 'G-52BB3MTCZ4', { 'page_path': '/' });
+								},
+							],
+						},
+					},
+				};
 	
 			// Expose doNext, doPrevious, doFirst, doLast.
 				window._next = doNext;
@@ -586,6 +652,9 @@
 	
 					// Activate initial section.
 						initialSection.classList.add('active');
+	
+						// Event: On Open.
+							doEvent(initialId, 'onopen');
 	
 					// Load elements.
 						loadElements(initialSection);
@@ -725,6 +794,9 @@
 										// Unload elements.
 											unloadElements(currentSection);
 	
+											// Event: On Close.
+												doEvent(currentSection.id, 'onclose');
+	
 										// Hide.
 											setTimeout(function() {
 												currentSection.style.display = 'none';
@@ -794,6 +866,9 @@
 												// Activate.
 													section.classList.remove('inactive');
 													section.classList.add('active');
+	
+													// Event: On Open.
+														doEvent(section.id, 'onopen');
 	
 												// Temporarily restore target heights.
 													section.style.minHeight = sectionHeight + 'px';
