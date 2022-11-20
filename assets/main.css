@@ -468,7 +468,7 @@ h1 span[style], h2 span[style], h3 span[style], p span[style], h1 strong, h2 str
 	-webkit-text-fill-color: currentcolor;
 }
 
-h1.style1, h2.style1, h3.style1, p.style1 {
+h1.style, h2.style, h3.style, p.style {
 	color: rgba(0,0,0,0.729);
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 0.15rem;
@@ -478,19 +478,19 @@ h1.style1, h2.style1, h3.style1, p.style1 {
 	font-weight: 400;
 }
 
-h1.style1 a, h2.style1 a, h3.style1 a, p.style1 a {
+h1.style a, h2.style a, h3.style a, p.style a {
 	text-decoration: underline;
 }
 
-h1.style1 a:hover, h2.style1 a:hover, h3.style1 a:hover, p.style1 a:hover {
+h1.style a:hover, h2.style a:hover, h3.style a:hover, p.style a:hover {
 	text-decoration: none;
 }
 
-h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 span.p:nth-child(n + 2), p.style1 span.p:nth-child(n + 2) {
+h1.style span.p:nth-child(n + 2), h2.style span.p:nth-child(n + 2), h3.style span.p:nth-child(n + 2), p.style span.p:nth-child(n + 2) {
 	margin-top: 1rem;
 }
 
-#text12 {
+#text-title {
 	color: rgba(0,0,0,0.729);
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 1em;
@@ -498,19 +498,19 @@ h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 
 	font-weight: 400;
 }
 
-#text12 a {
+#text-title a {
 	text-decoration: underline;
 }
 
-#text12 a:hover {
+#text-title a:hover {
 	text-decoration: none;
 }
 
-#text12 span.p:nth-child(n + 2) {
+#text-title span.p:nth-child(n + 2) {
 	margin-top: 1rem;
 }
 
-#text07 {
+#footer {
 	color: rgba(0,0,0,0.729);
 	font-family: 'Source Sans Pro', sans-serif;
 	letter-spacing: 0.075rem;
@@ -520,15 +520,15 @@ h1.style1 span.p:nth-child(n + 2), h2.style1 span.p:nth-child(n + 2), h3.style1 
 	font-weight: 400;
 }
 
-#text07 a {
+#footer a {
 	text-decoration: underline;
 }
 
-#text07 a:hover {
+#footer a:hover {
 	text-decoration: none;
 }
 
-#text07 span.p:nth-child(n + 2) {
+#footer span.p:nth-child(n + 2) {
 	margin-top: 1rem;
 }
 
@@ -566,7 +566,7 @@ hr:before {
 	vertical-align: middle;
 }
 
-hr.style1:before {
+hr.style:before {
 	width: 50rem;
 	border-top: solid 2px rgba(0,0,0,0.729);
 	height: 2px;
@@ -595,13 +595,13 @@ hr.style1:before {
 	white-space: nowrap;
 }
 
-.buttons.style1 {
+.buttons.style {
 	gap: 0.75rem;
 	flex-direction: row;
 	flex-wrap: wrap;
 }
 
-.buttons.style1 li a {
+.buttons.style li a {
 	display: inline-block;
 	width: auto;
 	height: 2rem;
@@ -618,12 +618,12 @@ hr.style1:before {
 	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
-.buttons.style1 .button {
+.buttons.style .button {
 	color: rgba(0,0,0,0.729);
 	border: solid 2px rgba(0,0,0,0.729);
 }
 
-.buttons.style1 .button:hover {
+.buttons.style .button:hover {
 	border-color: #EBCE38 !important;
 	color: #EBCE38 !important;
 }
@@ -845,21 +845,21 @@ hr.style1:before {
 		margin-bottom: -2.75rem !important;
 	}
 	
-	h1.style1, h2.style1, h3.style1, p.style1 {
+	h1.style, h2.style, h3.style, p.style {
 		letter-spacing: 0.13125rem;
 		width: calc(100% + 0.13125rem);
 		font-size: 2.75em;
 		line-height: 0.75;
 	}
 	
-	#text12 {
+	#text-title {
 		letter-spacing: 0rem;
 		width: 100%;
 		font-size: 1em;
 		line-height: 1;
 	}
 	
-	#text07 {
+	#footer {
 		letter-spacing: 0.065625rem;
 		width: calc(100% + 0.065625rem);
 		font-size: 0.625em;
@@ -873,11 +873,11 @@ hr.style1:before {
 		line-height: 1.25;
 	}
 	
-	hr.style1:before {
+	hr.style:before {
 		width: 50rem;
 	}
 	
-	.buttons.style1 li a {
+	.buttons.style li a {
 		letter-spacing: 0rem;
 		font-size: 1em;
 	}
@@ -915,12 +915,12 @@ hr.style1:before {
 		--spacing: 0.875rem;
 	}
 	
-	.buttons.style1 {
+	.buttons.style {
 		flex-direction: column;
 		flex-wrap: nowrap;
 	}
 	
-	.buttons.style1 li a {
+	.buttons.style li a {
 		max-width: 32rem;
 		width: 100%;
 	}
@@ -961,15 +961,15 @@ hr.style1:before {
 		margin-bottom: -2.0625rem !important;
 	}
 	
-	h1.style1, h2.style1, h3.style1, p.style1 {
+	h1.style, h2.style, h3.style, p.style {
 		font-size: 2em;
 	}
 	
-	#text12 {
+	#text-title {
 		font-size: 1em;
 	}
 	
-	#text07 {
+	#footer {
 		font-size: 0.625em;
 	}
 	
@@ -977,7 +977,7 @@ hr.style1:before {
 		font-size: 1.125em;
 	}
 	
-	.buttons.style1 {
+	.buttons.style {
 		gap: 0.5625rem;
 	}
 	
