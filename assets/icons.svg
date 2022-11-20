@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Card Icons SVG License: MIT, SIL OFL -->
-<!-- Some icons courtesy of Font Awesome (fontawesome.io, SIL OFL) and Icomoon (icomoon.io, MIT). All logos and trademarks are property of their respective owners. -->
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 40" display="none" width="0" height="0">
 	<symbol id="shape-diamond" viewBox="0 0 40 40"><rect x="5.9" y="5.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.2843 20)" width="28.3" height="28.3" vector-effect="non-scaling-stroke" /></symbol>
 	<symbol id="shape-hexagon" viewBox="0 0 40 40"><polygon points="3.6,10.5 3.6,29.5 20,39 36.4,29.5 36.4,10.5 20,1" vector-effect="non-scaling-stroke" /></symbol>
